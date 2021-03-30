@@ -59,6 +59,8 @@ function pied_page()
             <img src="Images/Souris_1.jpg" alt="Souris blanches"/>
             <img src="Images/Betta.png" alt="Poisson betta"/>
         </div>
+        <div id="Legal">
+            <h3>Politiques et conditions</h3>
       </footer>
 
     <?php
