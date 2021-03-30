@@ -1,0 +1,77 @@
+body
+{
+    background-image:url(Images/fond_jaune.png);
+}
+#Principal
+{
+    width:1000px;
+    margin:auto;
+    /*border:solid 1px;*/
+}
+#Logo
+{
+    display:inline-block;
+    margin-left:25px;
+    margin-top:25px;
+}
+#Titre
+{
+    display:inline-block;
+    vertical-align:top;
+    width:75%;
+    
+    text-align:center;
+    font-family: 'Train One', cursive;
+    font-size:50px;
+    color:blue;
+    text-shadow:5px 5px 15px white;
+}
+header
+{
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    background-image:-webkit-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);
+    background-image:-moz-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);
+    background-image:-o-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);
+    /*filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr='#83F999', endColorstr='#08BC2A', GradientType=0);*/
+    background-color:rgb(28, 244, 69);
+    -moz-box-shadow:10px 10px 25px grey;
+    -webkit-box-shadow:10px 10px 25px grey;
+    box-shadow:10px 10px 25px grey;
+}
+#nav
+{
+    padding:0px;
+    margin:35px;
+}
+#nav li
+{
+    display:inline;
+    padding:0px;
+    margin:0px;
+    font-family:'Comic Sans MS';
+    font-size:medium;
+}
+#nav a:link, #nav a:visited
+{
+    color:whitesmoke;
+    background:forestgreen;
+    padding:15px 8px 2px 8px;
+    margin-right:-4px;
+    border:solid 1px black;
+    -moz-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+    text-decoration:none;
+}
+#nav a:hover
+{
+    color:forestgreen;
+    background:whitesmoke;
+}
+#Accueil #Nav-Accueil a
+{
+    background:#e35a00;
+    color:#fff;
+}
