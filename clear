@@ -1,0 +1,560 @@
+[33mcommit 9522ddbd956b8b8633b440ae4aa7c4837b1608e8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Felipe Oliveira <Felipe.kod@gmail.com>
+Date:   Tue Mar 30 10:29:59 2021 -0400
+
+    Segundo commit
+
+[1mdiff --git a/Fonctions/FonctionsBM.php b/Fonctions/FonctionsBM.php[m
+[1mindex 6e4aefc..d161da9 100644[m
+[1m--- a/Fonctions/FonctionsBM.php[m
+[1m+++ b/Fonctions/FonctionsBM.php[m
+[36m@@ -59,6 +59,8 @@[m [mfunction pied_page()[m
+             <img src="Images/Souris_1.jpg" alt="Souris blanches"/>[m
+             <img src="Images/Betta.png" alt="Poisson betta"/>[m
+         </div>[m
+[32m+[m[32m        <div id="Legal">[m
+[32m+[m[32m            <h3>Politiques et conditions</h3>[m
+       </footer>[m
+ [m
+     <?php[m
+
+[33mcommit 9186eb511b0776b729c5903fad8d6eecbfeaaddb[m
+Author: Felipe Oliveira <Felipe.kod@gmail.com>
+Date:   Tue Mar 30 10:25:36 2021 -0400
+
+    Primeiro commit
+
+[1mdiff --git a/CSS/Animalerie.css b/CSS/Animalerie.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fdc6004[m
+[1m--- /dev/null[m
+[1m+++ b/CSS/Animalerie.css[m
+[36m@@ -0,0 +1,77 @@[m
+[32m+[m[32mbody[m
+[32m+[m[32m{[m
+[32m+[m[32m    background-image:url(Images/fond_jaune.png);[m
+[32m+[m[32m}[m
+[32m+[m[32m#Principal[m
+[32m+[m[32m{[m
+[32m+[m[32m    width:1000px;[m
+[32m+[m[32m    margin:auto;[m
+[32m+[m[32m    /*border:solid 1px;*/[m
+[32m+[m[32m}[m
+[32m+[m[32m#Logo[m
+[32m+[m[32m{[m
+[32m+[m[32m    display:inline-block;[m
+[32m+[m[32m    margin-left:25px;[m
+[32m+[m[32m    margin-top:25px;[m
+[32m+[m[32m}[m
+[32m+[m[32m#Titre[m
+[32m+[m[32m{[m
+[32m+[m[32m    display:inline-block;[m
+[32m+[m[32m    vertical-align:top;[m
+[32m+[m[32m    width:75%;[m
+[32m+[m[41m    [m
+[32m+[m[32m    text-align:center;[m
+[32m+[m[32m    font-family: 'Train One', cursive;[m
+[32m+[m[32m    font-size:50px;[m
+[32m+[m[32m    color:blue;[m
+[32m+[m[32m    text-shadow:5px 5px 15px white;[m
+[32m+[m[32m}[m
+[32m+[m[32mheader[m
+[32m+[m[32m{[m
+[32m+[m[32m    -moz-border-radius:15px;[m
+[32m+[m[32m    -webkit-border-radius:15px;[m
+[32m+[m[32m    border-radius:15px;[m
+[32m+[m[32m    background-image:-webkit-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);[m
+[32m+[m[32m    background-image:-moz-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);[m
+[32m+[m[32m    background-image:-o-linear-gradient(top, rgb(131, 249, 153) 0%, rgb(8, 188, 42) 100%);[m
+[32m+[m[32m    /*filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr='#83F999', endColorstr='#08BC2A', GradientType=0);*/[m
+[32m+[m[32m    background-color:rgb(28, 244, 69);[m
+[32m+[m[32m    -moz-box-shadow:10px 10px 25px grey;[m
+[32m+[m[32m    -webkit-box-shadow:10px 10px 25px grey;[m
+[32m+[m[32m    box-shadow:10px 10px 25px grey;[m
+[32m+[m[32m}[m
+[32m+[m[32m#nav[m
+[32m+[m[32m{[m
+[32m+[m[32m    padding:0px;[m
+[32m+[m[32m    margin:35px;[m
+[32m+[m[32m}[m
+[32m+[m[32m#nav li[m
+[32m+[m[32m{[m
+[32m+[m[32m    display:inline;[m
+[32m+[m[32m    padding:0px;[m
+[32m+[m[32m    margin:0px;[m
+[32m+[m[32m    font-family:'Comic Sans MS';[m
+[32m+[m[32m    font-size:medium;[m
+[32m+[m[32m}[m
+[32m+[m[32m#nav a:link, #nav a:visited[m
+[32m+[m[32m{[m
+[32m+[m[32m    color:whitesmoke;[m
+[32m+[m[32m    background:forestgreen;[m
+[32m+[m[32m    padding:15px 8px 2px 8px;[m
+[32m+[m[32m    margin-right:-4px;[m
+[32m+[m[32m    border:solid 1px black;[m
+[32m+[m[32m    -moz-border-radius:5px 5px 0 0;[m
+[32m+[m[32m    -webkit-border-radius:5px 5px 0 0;[m
+[32m+[m[32m    border-radius:5px 5px 0 0;[m
+[32m+[m[32m    text-decoration:none;[m
+[32m+[m[32m}[m
+[32m+[m[32m#nav a:hover[m
+[32m+[m[32m{[m
+[32m+[m[32m    color:forestgreen;[m
+[32m+[m[32m    background:whitesmoke;[m
+[32m+[m[32m}[m
+[32m+[m[32m#Accueil #Nav-Accueil a[m
+[32m+[m[32m{[m
+[32m+[m[32m    background:#e35a00;[m
+[32m+[m[32m    color:#fff;[m
+[32m+[m[32m}[m
+[1mdiff --git a/Chat.php b/Chat.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cf561da[m
+[1m--- /dev/null[m
+[1m+++ b/Chat.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Chat');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis les félins.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Chien.php b/Chien.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..87e960a[m
+[1m--- /dev/null[m
+[1m+++ b/Chien.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Chien');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis canins.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Fonctions/FonctionsBM.php b/Fonctions/FonctionsBM.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6e4aefc[m
+[1m--- /dev/null[m
+[1m+++ b/Fonctions/FonctionsBM.php[m
+[36m@@ -0,0 +1,68 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32mfunction creer_entete_html($ID)[m
+[32m+[m[32m{[m
+[32m+[m[32m    ?>[m
+[32m+[m[32m    <!DOCTYPE html>[m
+[32m+[m[32m    <html lang="fr">[m
+[32m+[m[32m        <head>[m
+[32m+[m[32m            <meta charset="utf‐8" />[m
+[32m+[m[32m            <title>Animalerie Becs et Museaux</title>[m
+[32m+[m[32m            <link rel="stylesheet" href="../CSS/Animalerie.css" />[m
+[32m+[m[32m            <link rel="preconnect" href="https://fonts.gstatic.com">[m
+[32m+[m[32m            <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">[m
+[32m+[m[32m            <!‐‐[if lt IE 9]>[m
+[32m+[m[32m            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>[m
+[32m+[m[32m            <![endif]‐‐>[m
+[32m+[m[32m        </head>[m
+[32m+[m[32m        <body id=<?php echo $ID;?>>[m
+[32m+[m[32m          <div id="Principal">[m
+[32m+[m[32m    <?php[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction entente_page()[m
+[32m+[m[32m{[m
+[32m+[m[32m    ?>[m
+[32m+[m[32m        <header>[m
+[32m+[m[32m            <img id="logo" src="images/logo.gif" alt="logo" />[m
+[32m+[m[32m            <h1 id="Titre">Animalerie Becs et Museaux </h1>[m
+[32m+[m[32m            <nav>[m
+[32m+[m[32m                <ul id="nav">[m
+[32m+[m[32m                    <li id="Nav-Accueil"><a href="index.php">Accueil</a></li>[m
+[32m+[m[32m                    <li id="Nav-Chien"><a href="Chat.php">Les chats</a></li>[m
+[32m+[m[32m                    <li id="Nav-Poisson"><a href="Poisson.php">Les poissons</a></li>[m
+[32m+[m[32m                    <li id="Nav-Oiseau"><a href="Oiseau.php">Les oiseaux</a></li>[m
+[32m+[m[32m                    <li id="Nav-Reptile"><a href="Reptile.php">Les reptiles</a></li>[m
+[32m+[m[32m                    <li id="Nav-Rongeur"><a href="Rongeur.php">Les ronguers</a></li>[m
+[32m+[m[32m                    <li id="Nav-Produit"><a href="Produit.php">Les produits</a></li>[m
+[32m+[m[32m                    <li id="Nav-Discussion"><a href="Discussion.php">Les échanges</a></li>[m
+[32m+[m[32m                </ul>[m
+[32m+[m[32m            </nav>[m
+[32m+[m[32m        </header>[m
+[32m+[m
+[32m+[m[32m    <?php[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction pied_page()[m
+[32m+[m[32m{[m
+[32m+[m[32m    ?>[m
+[32m+[m[32m      <footer>[m
+[32m+[m[32m        <div id="Images">[m
+[32m+[m[32m            <h3 id="titre_pied">Photo du mois</h3>[m
+[32m+[m[32m            <img src="Images/Chiot_Dort.jpg" alt="Chiot qui dort"/>[m
+[32m+[m[32m            <img src="Images/Chat_Siamois.jpg" alt="Chat siamois"/>[m
+[32m+[m[32m            <img src="Images/Boa_Albinos.jpg" alt="Boa Albinos"/>[m
+[32m+[m[32m            <img src="Images/Golden.jpg" alt="Maman et bébé golden"/>[m
+[32m+[m[32m            <img src="Images/hamster_Bébé.jpg" alt="bébé hamster"/>[m
+[32m+[m[32m            <img src="Images/Himalayen_2.jpg" alt="chat himalayen"/>[m
+[32m+[m[32m            <img src="Images/Lézard_2.jpg" alt="L'anolis vert"/>[m
+[32m+[m[32m            <img src="Images/Souris_1.jpg" alt="Souris blanches"/>[m
+[32m+[m[32m            <img src="Images/Betta.png" alt="Poisson betta"/>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </footer>[m
+[32m+[m
+[32m+[m[32m    <?php[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Images/Annuler.png b/Images/Annuler.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..039c1e4[m
+Binary files /dev/null and b/Images/Annuler.png differ
+[1mdiff --git a/Images/Bassin_Tortue.jpg b/Images/Bassin_Tortue.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5762a58[m
+Binary files /dev/null and b/Images/Bassin_Tortue.jpg differ
+[1mdiff --git a/Images/Beagle.jpg b/Images/Beagle.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0bfcb47[m
+Binary files /dev/null and b/Images/Beagle.jpg differ
+[1mdiff --git a/Images/Berger_Allemand.jpg b/Images/Berger_Allemand.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..248abc0[m
+Binary files /dev/null and b/Images/Berger_Allemand.jpg differ
+[1mdiff --git a/Images/Betta_1.png b/Images/Betta_1.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7a813f4[m
+Binary files /dev/null and b/Images/Betta_1.png differ
+[1mdiff --git a/Images/Betta_2.png b/Images/Betta_2.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..663297d[m
+Binary files /dev/null and b/Images/Betta_2.png differ
+[1mdiff --git a/Images/Betta_3.png b/Images/Betta_3.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..00ed0b5[m
+Binary files /dev/null and b/Images/Betta_3.png differ
+[1mdiff --git a/Images/Boa_Albinos.jpg b/Images/Boa_Albinos.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..da6a914[m
+Binary files /dev/null and b/Images/Boa_Albinos.jpg differ
+[1mdiff --git a/Images/Cage_Hamster.jpg b/Images/Cage_Hamster.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d672147[m
+Binary files /dev/null and b/Images/Cage_Hamster.jpg differ
+[1mdiff --git a/Images/Cage_Oiseau.jpg b/Images/Cage_Oiseau.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ed68a51[m
+Binary files /dev/null and b/Images/Cage_Oiseau.jpg differ
+[1mdiff --git a/Images/Cage_Souris.jpg b/Images/Cage_Souris.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4ff9124[m
+Binary files /dev/null and b/Images/Cage_Souris.jpg differ
+[1mdiff --git a/Images/Chat.gif b/Images/Chat.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a70ca43[m
+Binary files /dev/null and b/Images/Chat.gif differ
+[1mdiff --git "a/Images/ChatEtB\303\251b\303\251.jpg" "b/Images/ChatEtB\303\251b\303\251.jpg"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bed56e9[m
+Binary files /dev/null and "b/Images/ChatEtB\303\251b\303\251.jpg" differ
+[1mdiff --git a/Images/Chat_Siamois.jpg b/Images/Chat_Siamois.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fbc4502[m
+Binary files /dev/null and b/Images/Chat_Siamois.jpg differ
+[1mdiff --git a/Images/Chat_petit.gif b/Images/Chat_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d2c8dde[m
+Binary files /dev/null and b/Images/Chat_petit.gif differ
+[1mdiff --git a/Images/Chaton.jpg b/Images/Chaton.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1458686[m
+Binary files /dev/null and b/Images/Chaton.jpg differ
+[1mdiff --git a/Images/Chats_Amour.jpg b/Images/Chats_Amour.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7da1787[m
+Binary files /dev/null and b/Images/Chats_Amour.jpg differ
+[1mdiff --git a/Images/Chien.gif b/Images/Chien.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..da722f7[m
+Binary files /dev/null and b/Images/Chien.gif differ
+[1mdiff --git a/Images/Chien_Chats.jpg b/Images/Chien_Chats.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0efe585[m
+Binary files /dev/null and b/Images/Chien_Chats.jpg differ
+[1mdiff --git a/Images/Chien_petit.gif b/Images/Chien_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fb9f9eb[m
+Binary files /dev/null and b/Images/Chien_petit.gif differ
+[1mdiff --git a/Images/Chiens_Chinois.jpg b/Images/Chiens_Chinois.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5d72316[m
+Binary files /dev/null and b/Images/Chiens_Chinois.jpg differ
+[1mdiff --git a/Images/Chiot_Dort.jpg b/Images/Chiot_Dort.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..97ccaa5[m
+Binary files /dev/null and b/Images/Chiot_Dort.jpg differ
+[1mdiff --git a/Images/Christa.jpg b/Images/Christa.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..12bced5[m
+Binary files /dev/null and b/Images/Christa.jpg differ
+[1mdiff --git a/Images/EnConstruction.gif b/Images/EnConstruction.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..142a3a3[m
+Binary files /dev/null and b/Images/EnConstruction.gif differ
+[1mdiff --git a/Images/EnConstruction2.gif b/Images/EnConstruction2.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..803600d[m
+Binary files /dev/null and b/Images/EnConstruction2.gif differ
+[1mdiff --git a/Images/EnConstruction3.gif b/Images/EnConstruction3.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4362978[m
+Binary files /dev/null and b/Images/EnConstruction3.gif differ
+[1mdiff --git a/Images/Enregistrer.jpg b/Images/Enregistrer.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e398f53[m
+Binary files /dev/null and b/Images/Enregistrer.jpg differ
+[1mdiff --git a/Images/Golden.jpg b/Images/Golden.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dbae2cd[m
+Binary files /dev/null and b/Images/Golden.jpg differ
+[1mdiff --git a/Images/Hamster_1.png b/Images/Hamster_1.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6a8bbee[m
+Binary files /dev/null and b/Images/Hamster_1.png differ
+[1mdiff --git "a/Images/Hamster_B\303\251b\303\251.jpg" "b/Images/Hamster_B\303\251b\303\251.jpg"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..52b6015[m
+Binary files /dev/null and "b/Images/Hamster_B\303\251b\303\251.jpg" differ
+[1mdiff --git a/Images/Hamster_Cage.jpg b/Images/Hamster_Cage.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e758c75[m
+Binary files /dev/null and b/Images/Hamster_Cage.jpg differ
+[1mdiff --git a/Images/Hamster_Roue.jpg b/Images/Hamster_Roue.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e4c14c9[m
+Binary files /dev/null and b/Images/Hamster_Roue.jpg differ
+[1mdiff --git a/Images/Himalayen_1.jpg b/Images/Himalayen_1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1e09c0[m
+Binary files /dev/null and b/Images/Himalayen_1.jpg differ
+[1mdiff --git a/Images/Himalayen_2.jpg b/Images/Himalayen_2.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4aa89aa[m
+Binary files /dev/null and b/Images/Himalayen_2.jpg differ
+[1mdiff --git a/Images/Huskie.jpg b/Images/Huskie.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1d72fcd[m
+Binary files /dev/null and b/Images/Huskie.jpg differ
+[1mdiff --git a/Images/Icone.jpg b/Images/Icone.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f3a036d[m
+Binary files /dev/null and b/Images/Icone.jpg differ
+[1mdiff --git a/Images/Livre_Tortue.jpg b/Images/Livre_Tortue.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..25620d3[m
+Binary files /dev/null and b/Images/Livre_Tortue.jpg differ
+[1mdiff --git a/Images/Logo.gif b/Images/Logo.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06652c4[m
+Binary files /dev/null and b/Images/Logo.gif differ
+[1mdiff --git "a/Images/L\303\251zard_1.jpg" "b/Images/L\303\251zard_1.jpg"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..101d1d9[m
+Binary files /dev/null and "b/Images/L\303\251zard_1.jpg" differ
+[1mdiff --git "a/Images/L\303\251zard_2.jpg" "b/Images/L\303\251zard_2.jpg"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5f03392[m
+Binary files /dev/null and "b/Images/L\303\251zard_2.jpg" differ
+[1mdiff --git "a/Images/L\303\251zard_Joue.jpg" "b/Images/L\303\251zard_Joue.jpg"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..494a5b3[m
+Binary files /dev/null and "b/Images/L\303\251zard_Joue.jpg" differ
+[1mdiff --git a/Images/Nourriture_Oiseau.jpg b/Images/Nourriture_Oiseau.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..999461d[m
+Binary files /dev/null and b/Images/Nourriture_Oiseau.jpg differ
+[1mdiff --git a/Images/Oiseau.gif b/Images/Oiseau.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..525c9e7[m
+Binary files /dev/null and b/Images/Oiseau.gif differ
+[1mdiff --git a/Images/Oiseau_petit.gif b/Images/Oiseau_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..41b8473[m
+Binary files /dev/null and b/Images/Oiseau_petit.gif differ
+[1mdiff --git a/Images/Page_Construction.jpg b/Images/Page_Construction.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a1a4683[m
+Binary files /dev/null and b/Images/Page_Construction.jpg differ
+[1mdiff --git a/Images/Perroquet.jpg b/Images/Perroquet.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..28c1c03[m
+Binary files /dev/null and b/Images/Perroquet.jpg differ
+[1mdiff --git a/Images/Perruche.png b/Images/Perruche.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..88a922e[m
+Binary files /dev/null and b/Images/Perruche.png differ
+[1mdiff --git a/Images/Poisson.gif b/Images/Poisson.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4b40c01[m
+Binary files /dev/null and b/Images/Poisson.gif differ
+[1mdiff --git a/Images/Poisson_1.jpg b/Images/Poisson_1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aee92c5[m
+Binary files /dev/null and b/Images/Poisson_1.jpg differ
+[1mdiff --git a/Images/Poisson_2.jpg b/Images/Poisson_2.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5b02e9c[m
+Binary files /dev/null and b/Images/Poisson_2.jpg differ
+[1mdiff --git a/Images/Poisson_3.jpg b/Images/Poisson_3.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..33adada[m
+Binary files /dev/null and b/Images/Poisson_3.jpg differ
+[1mdiff --git a/Images/Poisson_Nourriture.jpg b/Images/Poisson_Nourriture.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d54729d[m
+Binary files /dev/null and b/Images/Poisson_Nourriture.jpg differ
+[1mdiff --git a/Images/Poisson_petit.gif b/Images/Poisson_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b8327e5[m
+Binary files /dev/null and b/Images/Poisson_petit.gif differ
+[1mdiff --git a/Images/Reptile.gif b/Images/Reptile.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0c84187[m
+Binary files /dev/null and b/Images/Reptile.gif differ
+[1mdiff --git a/Images/Reptile_petit.gif b/Images/Reptile_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..568a864[m
+Binary files /dev/null and b/Images/Reptile_petit.gif differ
+[1mdiff --git a/Images/Rongeur.gif b/Images/Rongeur.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ec50a2e[m
+Binary files /dev/null and b/Images/Rongeur.gif differ
+[1mdiff --git a/Images/Rongeur_petit.gif b/Images/Rongeur_petit.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0bbf4fd[m
+Binary files /dev/null and b/Images/Rongeur_petit.gif differ
+[1mdiff --git a/Images/Salamandre.jpg b/Images/Salamandre.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8b1cab0[m
+Binary files /dev/null and b/Images/Salamandre.jpg differ
+[1mdiff --git a/Images/Serin.png b/Images/Serin.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7799139[m
+Binary files /dev/null and b/Images/Serin.png differ
+[1mdiff --git a/Images/Serpent_Aquarium.jpg b/Images/Serpent_Aquarium.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d54ea13[m
+Binary files /dev/null and b/Images/Serpent_Aquarium.jpg differ
+[1mdiff --git a/Images/Souris_1.jpg b/Images/Souris_1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5906889[m
+Binary files /dev/null and b/Images/Souris_1.jpg differ
+[1mdiff --git a/Images/Thumbs.db b/Images/Thumbs.db[m
+[1mnew file mode 100644[m
+[1mindex 0000000..531f298[m
+Binary files /dev/null and b/Images/Thumbs.db differ
+[1mdiff --git a/Images/Tortue_1.jpg b/Images/Tortue_1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6273be1[m
+Binary files /dev/null and b/Images/Tortue_1.jpg differ
+[1mdiff --git a/Images/fille-chien.jpg b/Images/fille-chien.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..461c17e[m
+Binary files /dev/null and b/Images/fille-chien.jpg differ
+[1mdiff --git a/Images/fond_jaune.png b/Images/fond_jaune.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c605be8[m
+Binary files /dev/null and b/Images/fond_jaune.png differ
+[1mdiff --git a/Images/jeux_plantes.jpg b/Images/jeux_plantes.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1b08a39[m
+Binary files /dev/null and b/Images/jeux_plantes.jpg differ
+[1mdiff --git a/Index.php b/Index.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1663a84[m
+[1m--- /dev/null[m
+[1m+++ b/Index.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Accueil');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Page d'accueil du site "Animalerie Becs et Museaux"</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Oiseau.php b/Oiseau.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9aecb3f[m
+[1m--- /dev/null[m
+[1m+++ b/Oiseau.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Oiseau');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis volatiles.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Poisson.php b/Poisson.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0168d56[m
+[1m--- /dev/null[m
+[1m+++ b/Poisson.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Poisson');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis les poissons.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Reptile.php b/Reptile.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cc0b7bc[m
+[1m--- /dev/null[m
+[1m+++ b/Reptile.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Reptile');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis à sang froid.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
+[1mdiff --git a/Rongeur.php b/Rongeur.php[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8daf028[m
+[1m--- /dev/null[m
+[1m+++ b/Rongeur.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32minclude_once('Fonctions/FonctionsBM.php');[m
+[32m+[m[32mcreer_entete_html('Rongeur');[m
+[32m+[m[32mentente_page();[m
+[32m+[m[32m?>[m
+[32m+[m[32m<h3>Nos amis les rongeurs.</h3>[m
+[32m+[m[32m<?php[m
+[32m+[m[32mcreer_pied_html();[m
+[32m+[m[32m?>[m
+\ No newline at end of file[m
