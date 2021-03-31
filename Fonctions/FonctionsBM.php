@@ -61,8 +61,35 @@ function pied_page()
         </div>
         <div id="Legal">
             <h3>Politiques et conditions</h3>
+            <ul>
+                <li><a href="Confidentialite.html">Politique de confidentifalité</a></li>
+                <li><a href="Utilisation.html">Conditions d'utilisation</a></li>
+                <li><a href="#">Aide</a></li>
+                <li>Ce site a été créé par<a href="http://www.collegecdi.ca">TechNet Inc.</a></li>
+                <li><small><sup>&copy</sup>2012 Animalerie becs et museaux</small></li>
+            </ul>
+        </div>
+        <div id="Liens">
+            <h3>Liens utiles et conseils</h3>
+            <ul>
+            <li><a href="http://www.eleveurs.ca/">Site répertoire des éleveurs de chies au Canada</a></li>
+            <li><a href="http://www.spca.com/">Société pour la prévention de la cruauté envers les animaux</a></li>
+            <li><a href="http://www.trouvetonchien.com/">Pour trouver votre animal de compagnie</a></li>
+            <li><a href="Achat.html">Quelques conseils avant d'acheter votre animal de compagnie</a></li>
+            </ul>
+        </div>
+
       </footer>
 
+    <?php
+}
+
+function creer_pied_html()
+{
+    ?>
+              </div>
+            </body>
+        </html>
     <?php
 }
 

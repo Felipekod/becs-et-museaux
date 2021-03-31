@@ -5,5 +5,6 @@ entente_page();
 ?>
 <h3>Nos amis canins.</h3>
 <?php
+pied_page();
 creer_pied_html();
 ?>

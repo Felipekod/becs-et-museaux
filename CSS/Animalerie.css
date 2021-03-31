@@ -75,3 +75,84 @@ header
     background:#e35a00;
     color:#fff;
 }
+
+footer
+{
+-moz-border‐radius:15px;
+-webkit-border‐radius:15px;
+border-radius:20px;
+background-image:-webkit-linear-gradient(top, rgb(131, 249, 153) 0%,
+rgb(8, 188, 42) 100%);
+background-image:-moz-linear-gradient(top, rgb(131, 249, 153) 0%,
+rgb(8, 188, 42) 100%);
+background-image:-o-linear-gradient(top, rgb(131, 249, 153) 0%,
+rgb(8, 188, 42) 100%);
+background-color:rgb(28, 244, 69);
+-moz-box‐shadow:10px 10px 25px grey;
+-webkit-box‐shadow:10px 10px 25px grey;
+box-shadow:10px 10px 25px grey;
+padding:8px;
+}
+
+footer h3
+{
+font-size:large;
+text-align:center;
+color:navy;
+}
+
+#Images img
+{
+height:70px;
+margin-left:5px;
+margin-bottom:10px;
+border:solid 1px red;
+}
+
+#Images
+{
+width:95%;
+margin:auto;
+border:solid 1px red;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:20px;
+-moz-box-shadow:10px 10px 25px grey;
+-webkit-box-shadow:10px 10px 25px grey;
+box-shadow:10px 10px 25px grey;
+}
+
+#Legal
+{
+    display:inline-block;
+    vertical-align:top;
+    width:49%;
+    margin-top:10px;
+}
+
+#Liens
+{
+display:inline-block;
+vertical-align:top;
+width:49%;
+border-left:solid 1px red;
+margin-top:10px;
+}
+#Legal li
+{
+list-style:none;
+font-size:medium;
+color:blue;
+}
+
+#Liens li
+{
+list-style-image:url('../Images/Icone.jpg');
+font-size:medium;
+}
+#Legal a, #Legal a:visited, #Legal a:link, #Liens a, #Liens
+a:visited, #Liens a:link
+{
+text-decoration:none;
+color:navy;
+}
