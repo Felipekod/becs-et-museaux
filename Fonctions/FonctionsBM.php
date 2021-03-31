@@ -20,6 +20,8 @@ function ConnectionBD()
             //retour de la chaine de connexion à la fonction appelante
             return $db;
         }
+        ?>
+    <?php
 }
 
 function creer_entete_html($ID)
