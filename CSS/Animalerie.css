@@ -76,10 +76,78 @@ header
     color:#fff;
 }
 
+#contenu
+{
+color:blue;
+}
+#Contenu h1, #Contenu h3
+{
+text-align:center;
+color:navy;
+font-weight:bolder;
+text-align:center;
+}
+#Contenu em, #Contenu strong
+{
+font-style:italic;
+font-weight:bold;
+color:red;
+}
+#Contenu article
+{
+display:inline-block;
+vertical-align:top;
+width:65%;
+text-align:justify;
+padding: 10px 15px;
+}
+#Contenu article h2
+{
+text-align: center;
+color: navy;
+}
+#Contenu aside
+{
+display:inline-block;
+vertical-align:top;
+width:31%;
+background-color:#e7dfdf;
+text-align:justify;
+margin-bottom: 20px;
+}
+#Login
+{
+text-align:right;
+color:black;
+padding:2px;
+background-color:rgb(28, 244, 69);
+font-size: medium;
+padding: 1px 5px;
+}
+#Login input[type="text"], #Login input[type="password"]
+{
+width:42%;
+}
+
+#login input
+{
+
+}
+#Info
+{
+color:#1e208f;
+padding:5px;
+}
+#Info h3
+{
+text-align:center;
+Color:#b70707;
+}
+
 footer
 {
--moz-border‐radius:15px;
--webkit-border‐radius:15px;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
 border-radius:20px;
 background-image:-webkit-linear-gradient(top, rgb(131, 249, 153) 0%,
 rgb(8, 188, 42) 100%);

@@ -1,5 +1,27 @@
 <?php
 
+function ConnectionBD()
+{
+    ?>
+        <?php 
+        // creation de la connexion à MySQL
+        $db = mysqli_connect('localhost', 'root');
+        $ok = mysqli_select_db($db, 'becsetmuseaux');
+        if(! $ok)
+        {
+            //S'il est impossible de selectionner la base de données
+            $ok = mysqli_close($connection);
+        }
+        else
+        {
+            //Initialisation du "charset"
+            mysqli_set_charset($db, 'utf8');
+
+            //retour de la chaine de connexion à la fonction appelante
+            return $db;
+        }
+}
+
 function creer_entete_html($ID)
 {
     ?>
@@ -20,6 +42,7 @@ function creer_entete_html($ID)
     <?php
 }
 
+
 function entente_page()
 {
     ?>
@@ -39,13 +62,41 @@ function entente_page()
                 </ul>
             </nav>
         </header>
+        <section id="Contenu">
+            <article>
 
+    <?php
+}
+
+
+function aside_page()
+{
+    ?>
+        </article>
+        <aside>
+                <div id="Login">
+                    <form name="login" action="*" method="post">
+                        <p><label for="txtUtilisateur">Nom d'utilisateur : </label><input type="text" name="txtutilisateur"></p>
+                        <p><label for="txtPassword">Mot de passe : </label><input type="password" name="txtPassword"></p>
+                        <p><input type="submit" name="btnSoumettre" value="Soumettre"> </p>
+                    </form>
+                </div>
+                <div id="Info">
+                        <h3>Événements à venir</h3>
+                        <p>Le 24 juin prochain : Ouverture du salon de l'animal de compagnie au Centre des congrès de Québec.</p>
+                </div>
+        </aside>
+    </section>
+
+    
     <?php
 }
 
 function pied_page()
 {
     ?>
+            </article>
+        </section>    
       <footer>
         <div id="Images">
             <h3 id="titre_pied">Photo du mois</h3>
