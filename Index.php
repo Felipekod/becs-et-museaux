@@ -34,7 +34,13 @@ entente_page();
     point de vente le plus près de chez vous. Notre personnel qualifié se
     fera un plaisir de répondre à vos questions.</p>
 <?php
-aside_page();
+if($prenom == '')
+{
+    aside_page(false);
+}
+else{
+    aside_page(true);
+}
 pied_page();
 creer_pied_html();
 ?>

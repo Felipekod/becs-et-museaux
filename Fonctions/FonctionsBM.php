@@ -39,6 +39,14 @@ function creer_entete_html($ID)
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
             <![endif]‐‐>
         </head>
+
+        <?php
+            if($ID != 'Newuser' && $ID != 'Authentification')
+            {
+                $_SESSION['page'] = $ID;
+            }
+        ?>
+
         <body id=<?php echo $ID;?>>
           <div id="Principal">
     <?php
@@ -76,13 +84,31 @@ function aside_page()
     ?>
         </article>
         <aside>
+            <?php
+            session_start();
+            $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
+            $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
+            if($logged) :
+            ?>
                 <div id="Login">
-                    <form name="login" action="*" method="post">
+                    <?php
+                    echo("<p>Bienvenu $prenom $nomFamille</p>");
+                    ?>
+                    <p><a href="Inscription.php">Modifier mes informations</a></p>
+                    <p><a href="FinSession.php">Terminer ma session</a></p>
+                </div>
+                <?php 
+                elseif(!$nouveau) :
+                ?>
+                <div id="Login">
+                    <form name="login" action="Authentification.php" method="post">
                         <p><label for="txtUtilisateur">Nom d'utilisateur : </label><input type="text" name="txtutilisateur"></p>
                         <p><label for="txtPassword">Mot de passe : </label><input type="password" name="txtPassword"></p>
                         <p><input type="submit" name="btnSoumettre" value="Soumettre"> </p>
                     </form>
                 </div>
+                <?php
+                endif;  ?>
                 <div id="Info">
                         <h3>Événements à venir</h3>
                         <p>Le 24 juin prochain : Ouverture du salon de l'animal de compagnie au Centre des congrès de Québec.</p>
@@ -146,5 +172,75 @@ function creer_pied_html()
     <?php
 }
 
+function authentification($nomutilisateur, $motPasse)
+{
+    ?>
+        <?php
+        $connection = ConnectionBD();
+        if(! $connection)
+        {
+            //Creation d'un message qui averti l'utilisateur de l'erreur
+            $message = "Il est actuellement impossible de se connecter à la base de données";
+        }
+        else{
+            //Creation de la requete selection
+            $requete = mysqli_query($connection, "SELECT * FROM tblutilisateurs WHERE NomUtilisateur = '$nomUtilisateur'
+            AND MotPasse = '$motPasse' ");
+            if(mysqli_num_rows($requete) != 0)
+            {
+                $utilisateur = mysqli_fetch_assoc($requete);
+                enregistrementSession($utilisateur);
+                $message = "Reussi";
+            }
+            else
+            {
+                //Creation d'un message qui averti l'utilisateur
+            $message = "Il est impossible de vous authentifier.
+            Soit vous n'êtes pas inscrit dans notre base de données, soit vous
+            avez mal saisi vos informations d'authentification. Dans ce dernier
+            cas, vérifiez votre nom d'utilisateur et votre mot de passe.";
+
+            }
+            $ok = mysqli_close($connection);
+        }
+        return $message;
+        ?>
+    <?php
+}
+
+function enregistrementSession()
+{
+    ?>
+        <?php
+            //inserction de données dans des variables de session.
+            $_SESSION['nomUtilisateur'] = $information['NomUtilisateur'];
+            $_SESSION['motPasse'] = $information['MotPasse'];
+            if($information['Sexe'])
+            {
+            $_SESSION['sexe'] = 'M.';
+            }
+            else
+            {
+            $_SESSION['sexe'] = 'Mme';
+            }
+            $_SESSION['prenom'] = $information['Prenom'];
+            $_SESSION['nomFamille'] = $information['Nom'];
+            $_SESSION['adresse'] = $information['Adresse'];
+            $_SESSION['ville'] = $information['Ville'];
+            $_SESSION['province'] = $information['Province'];
+            $_SESSION['codePostal'] = $information['codePostal'];
+            $_SESSION['telephone'] = $information['Telephone'];
+            $_SESSION['cellulaire'] = $information['Cellulaire'];
+            $_SESSION['courriel'] = $information['Courriel'];
+            $_SESSION['typeAnimal'] = $information['typeAnimal'];
+            $_SESSION['nomAnimal'] = $information['nomAnimal'];
+            $_SESSION['raceAnimal'] = $information['raceAnimal'];
+            $_SESSION['ageAnimal'] = $information['ageAnimal'];
+            $_SESSION['commentaires'] = $information['commentaires'];
+            $_SESSION['enregistre'] = 'true';
+
+        ?>
+    <?php
+}
 
 ?>
