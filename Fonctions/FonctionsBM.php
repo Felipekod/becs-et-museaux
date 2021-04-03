@@ -79,17 +79,17 @@ function entente_page()
 }
 
 
-function aside_page()
+function aside_page($logged, $nouveau = false)
 {
     ?>
         </article>
         <aside>
-            <?php
+<?php
             session_start();
             $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
             $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
             if($logged) :
-            ?>
+?>
                 <div id="Login">
                     <?php
                     echo("<p>Bienvenu $prenom $nomFamille</p>");
@@ -102,8 +102,8 @@ function aside_page()
                 ?>
                 <div id="Login">
                     <form name="login" action="Authentification.php" method="post">
-                        <p><label for="txtUtilisateur">Nom d'utilisateur : </label><input type="text" name="txtutilisateur"></p>
-                        <p><label for="txtPassword">Mot de passe : </label><input type="password" name="txtPassword"></p>
+                        <p><label for="txtUtilisateur">Nom d'utilisateur : </label><input type="text" name="txtUtilisateur"></p>
+                        <p><label for="txtMotPasse">Mot de passe : </label><input type="password" name="txtMotPasse"></p>
                         <p><input type="submit" name="btnSoumettre" value="Soumettre"> </p>
                     </form>
                 </div>
@@ -172,7 +172,7 @@ function creer_pied_html()
     <?php
 }
 
-function authentification($nomutilisateur, $motPasse)
+function authentification($nomUtilisateur, $motPasse)
 {
     ?>
         <?php
@@ -208,7 +208,7 @@ function authentification($nomutilisateur, $motPasse)
     <?php
 }
 
-function enregistrementSession()
+function enregistrementSession($information)
 {
     ?>
         <?php
@@ -228,15 +228,15 @@ function enregistrementSession()
             $_SESSION['adresse'] = $information['Adresse'];
             $_SESSION['ville'] = $information['Ville'];
             $_SESSION['province'] = $information['Province'];
-            $_SESSION['codePostal'] = $information['codePostal'];
+            $_SESSION['codePostal'] = $information['CodePostal'];
             $_SESSION['telephone'] = $information['Telephone'];
             $_SESSION['cellulaire'] = $information['Cellulaire'];
             $_SESSION['courriel'] = $information['Courriel'];
-            $_SESSION['typeAnimal'] = $information['typeAnimal'];
-            $_SESSION['nomAnimal'] = $information['nomAnimal'];
-            $_SESSION['raceAnimal'] = $information['raceAnimal'];
-            $_SESSION['ageAnimal'] = $information['ageAnimal'];
-            $_SESSION['commentaires'] = $information['commentaires'];
+            $_SESSION['typeAnimal'] = $information['TypeAnimal'];
+            $_SESSION['nomAnimal'] = $information['NomAnimal'];
+            $_SESSION['raceAnimal'] = $information['RaceAnimal'];
+            $_SESSION['ageAnimal'] = $information['AgeAnimal'];
+            $_SESSION['commentaires'] = $information['Commentaires'];
             $_SESSION['enregistre'] = 'true';
 
         ?>

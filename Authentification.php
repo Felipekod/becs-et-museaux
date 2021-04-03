@@ -5,9 +5,10 @@ session_start();
 $nomUtilisateur = $_POST['txtUtilisateur'];
 $motPasse = $_POST['txtMotPasse'];
 $page_precedente = $_SESSION['page'];
-include_once('fonctions/FonctionsBM.php');
-creer_entete_html('Authentication');
-entete_page();
+// include_once('Fonctions/FonctionsBM.php');
+require('Fonctions/FonctionsBM.php');
+creer_entete_html('Authentification');
+entente_page();
 
 $message = authentification($nomUtilisateur, $motPasse);
 if($message == "Reussi")
