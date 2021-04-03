@@ -1,6 +1,6 @@
 <?php
 include_once('Fonctions/FonctionsBM.php');
-creer_entete_html('Accueil');
+creer_entete_html('Index');
 entente_page();
 ?>
     <h1>Animalerie Becs et Museaux ‐ Accessoires et Services</h1>

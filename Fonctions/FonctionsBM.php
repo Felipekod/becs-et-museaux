@@ -26,6 +26,8 @@ function ConnectionBD()
 
 function creer_entete_html($ID)
 {
+    session_start();
+    
     ?>
     <!DOCTYPE html>
     <html lang="fr">
@@ -55,7 +57,12 @@ function creer_entete_html($ID)
 
 function entente_page()
 {
+    
+
+    echo($_SESSION['page']);
+
     ?>
+        
         <header>
             <img id="logo" src="images/logo.gif" alt="logo" />
             <h1 id="Titre">Animalerie Becs et Museaux </h1>
@@ -85,7 +92,7 @@ function aside_page($logged, $nouveau = false)
         </article>
         <aside>
 <?php
-            session_start();
+            
             $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
             $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
             if($logged) :
