@@ -2,6 +2,7 @@
 
 session_start();
 
+
 $nomUtilisateur = $_POST['txtUtilisateur'];
 $motPasse = $_POST['txtMotPasse'];
 $page_precedente = $_SESSION['page'];
@@ -13,7 +14,10 @@ entente_page();
 $message = authentification($nomUtilisateur, $motPasse);
 if($message == "Reussi")
 {
-    header("location: $page_precedente.php");
+    echo("teste");
+    echo("$nomUtilisateur");
+   echo("$page_precedente");
+   header("location: $page_precedente.php");
 }
 else
 {

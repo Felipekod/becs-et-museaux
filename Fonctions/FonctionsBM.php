@@ -27,7 +27,7 @@ function ConnectionBD()
 function creer_entete_html($ID)
 {
     session_start();
-    
+
     ?>
     <!DOCTYPE html>
     <html lang="fr">
@@ -59,7 +59,7 @@ function entente_page()
 {
     
 
-    echo($_SESSION['page']);
+
 
     ?>
         
@@ -93,8 +93,8 @@ function aside_page($logged, $nouveau = false)
         <aside>
 <?php
             
-            $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
-            $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
+              $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
+              $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
             if($logged) :
 ?>
                 <div id="Login">
@@ -217,8 +217,7 @@ function authentification($nomUtilisateur, $motPasse)
 
 function enregistrementSession($information)
 {
-    ?>
-        <?php
+   
             //inserction de données dans des variables de session.
             $_SESSION['nomUtilisateur'] = $information['NomUtilisateur'];
             $_SESSION['motPasse'] = $information['MotPasse'];
@@ -246,8 +245,10 @@ function enregistrementSession($information)
             $_SESSION['commentaires'] = $information['Commentaires'];
             $_SESSION['enregistre'] = 'true';
 
-        ?>
-    <?php
+            $prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
+            $nomFamille = isset($_SESSION['nomFamille'])?$_SESSION['nomFamille']:'';
+
+        
 }
 
 ?>

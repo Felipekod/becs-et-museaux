@@ -2,6 +2,11 @@
 include_once('Fonctions/FonctionsBM.php');
 creer_entete_html('Index');
 entente_page();
+
+$prenom = isset($_SESSION['prenom'])?$_SESSION['prenom']:'';
+
+
+
 ?>
     <h1>Animalerie Becs et Museaux ‐ Accessoires et Services</h1>
     <p>C'est avec plaisir que nous vous souhaitons la bienvenue sur
@@ -34,6 +39,7 @@ entente_page();
     point de vente le plus près de chez vous. Notre personnel qualifié se
     fera un plaisir de répondre à vos questions.</p>
 <?php
+
 if($prenom == '')
 {
     aside_page(false);
